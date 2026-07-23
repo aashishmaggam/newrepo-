@@ -5,9 +5,21 @@ jobs:
     name: nothing
     runs-on: ubuntu-latest
     steps:
-      - name: user
-        run: |
-         echo "hello user"
-         date
+      - run: echo "user"
+      - run: free -m
+  job-2:
+    name: nothing2
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "2"
+      - run: date
+  job-3:
+    name: nothing3
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+         echo "3"
          hostname
-         free -m
+        
+        
+        
