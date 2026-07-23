@@ -1,8 +1,30 @@
 name: Ash
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - main
+      - new
+      - 'all/**'
 jobs:
   job-1:
     runs-on: ubuntu-latest
     steps:
       - name: firstcommand
         run: echo "completed"
+  test:
+    runs-on: ubuntu-slim
+    steps:
+      - name: second
+        run: |
+          echo "2nd"
+          free -m
+          hostname
+  delpoy:
+    needs: job-1
+    runs-on: ubuntu-24.04
+    steps:
+      - name: third
+        run: echo "3rd"
+  
+          
+
