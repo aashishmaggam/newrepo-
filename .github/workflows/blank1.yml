@@ -1,5 +1,10 @@
 name: second
-on: push
+on: 
+  push:
+    branches:
+      - main
+      - dev
+      - 'relesre/**'
 jobs:
   job-1:
     name: nothing
