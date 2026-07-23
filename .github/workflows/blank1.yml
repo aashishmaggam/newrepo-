@@ -1,0 +1,9 @@
+name: second
+on: workflow_dispatch
+jobs:
+  job-1:
+    name: nothing
+    runs-on: ubuntu-latest
+    steps:
+      - name: maa
+        run: echo "helo maa"
