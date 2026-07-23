@@ -5,5 +5,9 @@ jobs:
     name: nothing
     runs-on: ubuntu-latest
     steps:
-      - name: maa
-        run: echo "helo maa"
+      - name: user
+        run: |
+         echo "hello user"
+         date
+         hostname
+         free -m
