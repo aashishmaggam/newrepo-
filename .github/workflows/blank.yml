@@ -3,9 +3,8 @@ name: first
 on: workflow_dispatch
 
 jobs:
-  build: App
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name:checkout repo
-      run:echo "hello"
-
+      - name: checkout repo
+        run: echo "hello"
