@@ -1,5 +1,5 @@
 name: second
-on: workflow_dispatch
+on: push
 jobs:
   job-1:
     name: nothing
@@ -8,6 +8,7 @@ jobs:
       - run: echo "user"
       - run: free -m
   job-2:
+    needs: job-1
     name: nothing2
     runs-on: ubuntu-latest
     steps:
