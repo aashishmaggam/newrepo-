@@ -1,10 +1,8 @@
-name: first
-
+name: Ash
 on: workflow_dispatch
-
 jobs:
-  build:
+  job-1:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repo
-        run: echo "hello"
+      - name: firstcommand
+        run: echo "completed"
